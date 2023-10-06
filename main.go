@@ -40,4 +40,9 @@ func main() {
 	fmt.Println(rangerTwo)
 	fmt.Println(rangeThree)
 
+	// appending to slices
+
+	rangerTwo = append(rangerTwo, "Rani")
+	fmt.Println(rangerTwo)
+
 }
