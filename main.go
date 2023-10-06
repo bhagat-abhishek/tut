@@ -26,12 +26,18 @@ func main() {
 
 	scores = append(scores, 56)
 
-	fmt.Print(scores, len(scores))
+	fmt.Println(scores, len(scores))
 
 	// slice rages
 
 	rangeOne := names[0:2]
 
+	rangerTwo := names[0:]
+
+	rangeThree := names[:1]
+
 	fmt.Println(rangeOne)
+	fmt.Println(rangerTwo)
+	fmt.Println(rangeThree)
 
 }
