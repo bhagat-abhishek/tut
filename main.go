@@ -1,48 +1,28 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 
-	fmt.Println("Magic of array")
+	// Using the strings library
 
-	// Array
+	greetings := "Hey! Abby Good Morning."
 
-	// var ages [3]int = [3]int{45, 56, 22}
-	var ages = [3]int{45, 56, 22}
+	// checking if the given string contains the passed sting, the reurm will be a type of bool
+	fmt.Println(strings.Contains(greetings, "Hey!!"))
 
-	fmt.Println(ages, len(ages))
+	// replcaing the strings in given strng -- will return a string outpt
+	fmt.Println(strings.ReplaceAll(greetings, "Hey!", "Hello,"))
 
-	names := [3]string{"Abby", "Vivek", "Amit"}
-	names[0] = "Abishek"
+	// convert te given string to uppercase
+	fmt.Println(strings.ToUpper(greetings))
 
-	fmt.Println(names, len(names))
+	// gives the inder of the passed parameter
+	fmt.Println(strings.Index(greetings, "Goo"))
 
-	// Slices
-
-	var scores = []int{50, 45, 23}
-
-	scores[1] = 12
-
-	scores = append(scores, 56)
-
-	fmt.Println(scores, len(scores))
-
-	// slice rages
-
-	rangeOne := names[0:2]
-
-	rangerTwo := names[0:]
-
-	rangeThree := names[:1]
-
-	fmt.Println(rangeOne)
-	fmt.Println(rangerTwo)
-	fmt.Println(rangeThree)
-
-	// appending to slices
-
-	rangerTwo = append(rangerTwo, "Rani")
-	fmt.Println(rangerTwo)
-
+	// returns a slice of array of the strng via a given paramenter
+	fmt.Println(strings.Split(greetings, " ")) // here (" ") and empty character will split them into slices and return
 }
