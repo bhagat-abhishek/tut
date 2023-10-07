@@ -1,28 +1,40 @@
 package main
 
-import (
-	"fmt"
-	"strings"
-)
+import "fmt"
 
 func main() {
 
-	// Using the strings library
+	// While type lop
 
-	greetings := "Hey! Abby Good Morning."
+	x := 0
 
-	// checking if the given string contains the passed sting, the reurm will be a type of bool
-	fmt.Println(strings.Contains(greetings, "Hey!!"))
+	for x < 5 {
+		fmt.Printf("The vaue of x is %v\n", x)
+		x++
+	}
 
-	// replcaing the strings in given strng -- will return a string outpt
-	fmt.Println(strings.ReplaceAll(greetings, "Hey!", "Hello,"))
+	// For loop
 
-	// convert te given string to uppercase
-	fmt.Println(strings.ToUpper(greetings))
+	for i := 0; i < 5; i++ {
+		fmt.Printf("the value of i is %v\n", i)
+	}
 
-	// gives the inder of the passed parameter
-	fmt.Println(strings.Index(greetings, "Goo"))
+	// slice of names
+	names := []string{"Abishek", "Vivek", "Amit", "Rani"}
 
-	// returns a slice of array of the strng via a given paramenter
-	fmt.Println(strings.Split(greetings, " ")) // here (" ") and empty character will split them into slices and return
+	// printing a each value from slice till the end of it/
+	for j := 0; j < len(names); j++ {
+		fmt.Println(names[j])
+	}
+
+	// printing the value and index from a slice
+	for index, value := range names {
+		fmt.Printf("The index at %v has value %v \n", index, value)
+	}
+
+	// wht if you ant only to pring the value and not index
+	for _, value := range names {
+		fmt.Printf("The value is %v \n", value)
+	}
+
 }
